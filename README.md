@@ -16,6 +16,9 @@ Contributing
 - Ruby 1.9.3
 - rubygems (or RVM, rbenv)
 - Git
+- MySQL (Version ??.###)
+**Optional and helpful but now required**
+- Homebrew (On Mac OS - Version ??.###)
 
 Clone the repository to your local dev environment.
 ```
