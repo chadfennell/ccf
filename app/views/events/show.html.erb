@@ -1,4 +1,4 @@
-<ol class="breadcrumb">
+    <ol class="breadcrumb">
   <li><%=link_to 'Home', root_path %> /</li>
   <li class="active"><%=@event.title%></li>
 </ol>
@@ -26,6 +26,7 @@
     <script type="text/javascript">
       //$(document).ready(function(){
         $('#project_description').wysihtml5();
+        $('.user_badge a img').tooltip();
       //s})
     </script>
     </div>
@@ -82,8 +83,8 @@
       <div id="attending_avatars">
         <%@event.registrations.each do |r|%>
           <div class='user_badge'>
-          <%=link_to user_path(r.user) do%>
-            <%=image_tag r.user.image, alt: r.user.name, width: 40, height: 40, title: r.user.name%>
+          <%=link_to user_path(r.user) do%> 
+            <%=image_tag r.user.image, class: "has-tooltip", :data => {:toggle => "tooltip",:placement => "left" },  alt: r.user.name, width: 40, height: 40, title: r.user.name%>
           <%end%>
           </div>
         <%end%>

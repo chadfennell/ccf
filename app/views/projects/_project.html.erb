@@ -39,7 +39,7 @@
       <%project.volunteers.each do |v|%>
         <div class='user_badge'>
         <%=link_to user_path(v.user) do%>
-          <%=image_tag v.user.image, alt: v.user.name, width: 40, height: 40, title: v.user.name%>
+          <%=image_tag v.user.image, class: "has-tooltip", alt: v.user.name, width: 40, height: 40, title: v.user.name%>
         <%end%>
         </div>
       <%end%>
